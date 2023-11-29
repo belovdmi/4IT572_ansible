@@ -8,8 +8,8 @@
         instance_type: t2.medium
         image_id: ami-0230bd60aa48260c6
         region: us-east-1
-        key_name: devops
-        vpc_subnet_id: subnet-07218a5203cede9fc
+        key_name: beld09-aws-1.0
+        vpc_subnet_id: subnet-04e72d569e67596c7
         network:
             assign_public_ip: yes
         wait: yes
@@ -23,7 +23,7 @@
     - name: Add instance host to group
       add_host:
         hostname: "{{ item.public_ip_address }}"
-        groupname: launched
+        groupname: launchedpython3 -y
       loop: "{{ ec2_instance_result.instances }}"
 
     - name: Wait for SSH connection
