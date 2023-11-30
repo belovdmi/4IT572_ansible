@@ -41,7 +41,7 @@
     - name: Install Git and Docker
       yum:
         name:
-          - docker-23.0.4
+          - docker-23.0
           - git
         update_cache: yes
       become: yes
